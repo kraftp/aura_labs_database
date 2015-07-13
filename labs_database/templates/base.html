@@ -1,0 +1,132 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>AURA - {{ page.title }}</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- CSS Files-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+      <link rel="stylesheet" href="{% static 'css/skins/blue.css' %}">
+
+      <link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+  </head>
+  <body>
+    <div>
+
+      <!-- HEADER
+      ================================================== -->
+      <div class="row">
+      	<div class="headerlogo four columns">
+      		<div class="logo">
+      			<a href="http://aura.undergradresearch.org">
+      			<img src="{% static 'images/AURALogo1.png' %}" class="logoimage" alt="info">
+      			</a>
+      		</div>
+      	</div>
+      	<div class="headermenu eight columns noleftmarg">
+      		<nav id="nav-wrap">
+      		<ul id="main-menu" class="nav-bar sf-menu">
+      			<li class="current">
+      			<a href="http://aura.undergradresearch.org">Home</a>
+      			</li>
+      			<li>
+      			<a href="http://aura.undergradresearch.org/pages/about">About</a>
+      			<ul>
+      				<li><a href="http://aura.undergradresearch.org/pages/mission">Mission</a></li>
+      				<li><a href="http://aura.undergradresearch.org/pages/steering_committee">Steering Committee</a></li>
+      				<li><a href="http://aura.undergradresearch.org/pages/research_organizations">Affiliated Research Organizations</a></li>
+      			</ul>
+      			</li>
+      			<li>
+      			<a href="http://aura.undergradresearch.org/pages/for_students">Students</a>
+      			<ul>
+      				<li><a href="http://aura.undergradresearch.org/pages/database">Database</a></li>
+      				<li><a href="http://aura.undergradresearch.org/pages/research_opportunities">Research Opportunities</a></li>
+      				<li><a href="http://aura.undergradresearch.org/pages/research_advice">Research Advice</a></li>
+      			</ul>
+      			</li>
+      			<li>
+      			<a href="http://aura.undergradresearch.org/pages/for_research_organizations">Research Organizations</a>
+      			</li>
+      			<li>
+      			<a href="http://aura.undergradresearch.org/pages/NCRC">NCRC</a>
+      			</li>
+      			<li>
+      			<a href="http://aura.undergradresearch.org/pages/contact_us">Contact Us</a>
+      			</li>
+      		</ul>
+      		</nav>
+      	</div>
+      </div>
+      <div class="clear">
+      </div>
+
+      <!-- CONTENT
+      ================================================== -->
+      <!-- SINGLE COLUMN-->
+      <div class="row">
+      	<div class="twelve columns">
+      		<h2>{{page.title}}</h2>
+      		<hr>
+      		<p>
+            <!--  ACTUAL CONTENT -->
+            {% block content %}
+            Content goes here!
+            {% endblock %}
+            <!-- END ACTUAL CONTENT -->
+      		</p>
+      	</div>
+      </div>
+
+
+
+<!-- FOOTER
+================================================== -->
+<div id="footer">
+	<footer class="row">
+	<p class="back-top floatright">
+		<a href="#top"><span></span></a>
+	</p>
+	<div class="four columns">
+		<h1>ABOUT US</h1>
+		 AURA is a national community of undergraduates and research organizations dedicated to the promotion of undergraduate research.
+	</div>
+	<div class="four columns">
+		<h1>GET SOCIAL</h1>
+		<a class="social facebook" href="https://www.facebook.com"></a>
+		<a class="social twitter" href="https://www.twitter.com"></a>
+	</div>
+	</footer>
+</div>
+<div class="copyright">
+	<div class="row">
+		<div class="six columns">
+			 &copy;<span class="small"> Copyright Association for Undergraduate Research Advancement</span>
+		</div>
+	</div>
+</div>
+
+
+</div>
+<!-- JAVASCRIPT
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<!--<script src="{% static 'scripts/foundation.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'scripts/elasticslideshow.js' %}"></script>
+<script src="{% static 'scripts/jquery.carouFredSel-6.0.5-packed.js' %}"></script>
+<script src="{% static 'scripts/jquery.cycle.js' %}"></script>
+<script src="{% static 'scripts/app.js' %}"></script>
+<script src="{% static 'scripts/modernizr.foundation.js' %}"></script>
+<script src="{% static 'scripts/slidepanel.js' %}"></script>
+<script src="{% static 'scripts/scrolltotop.js' %}"></script>
+<script src="{% static 'scripts/hoverIntent.js' %}"></script>
+<script src="{% static 'scripts/superfish.js' %}"></script>
+<script src="{% static 'scripts/responsivemenu.js' %}"></script>-->
+</body>
+</html>

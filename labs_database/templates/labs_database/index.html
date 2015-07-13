@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% if labs_list %}
+    <ul>
+    {% for lab in labs_list %}
+        <li><a href="{% url 'database:lab_detail' lab.id %}"> {{lab.university}} - {{ lab.pi_name }} </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}
